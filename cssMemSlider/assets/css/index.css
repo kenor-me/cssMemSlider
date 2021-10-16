@@ -1,0 +1,106 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --bg-dark: #1d1d1d;
+   --font-light: #FFFFFF;
+   --hover: #ffbb01;
+}
+
+html {
+   font-size: 18px;
+
+}
+
+body {
+   background-color: var(--bg-dark);
+   height: 100vh;
+}
+
+.container {
+   max-width: 1440px;
+   margin: 0 auto;
+   padding: 0 30px;
+   height: 100vh;
+}
+
+h1 {
+   text-transform: uppercase;
+   text-align: center;
+   font-family: 'Bebas Neue', cursive;
+   font-size: 40px;
+   letter-spacing: 0.4em;
+   color: var(--font-light);
+   padding: 45px 0;
+}
+
+.slider {
+   width: 100%;
+   height: calc(100vh - 300px);
+   box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+   display: inline-flex;
+   overflow: hidden;
+   border-radius: 15px;
+}
+
+.slides {
+   min-width: 100%;
+   object-fit: cover;
+}
+
+.controls-container {
+   display: flex;
+   justify-content: space-between;
+   padding-top: 30px;
+}
+
+.text-block {
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 1.5rem;
+   color: var(--font-light);
+   display: inline-flex;
+   overflow-x: hidden;
+}
+
+.text-block p {
+   min-width: 100%;
+}
+
+.controls {
+   display: flex;
+   justify-content: space-between;
+   min-width: 240px;
+}
+
+
+input {
+   display: none;
+}
+
+label {
+   cursor: pointer;
+   height: 20px;
+   width: 20px;
+   margin: 0 auto 12px;
+   border-radius: 50%;
+   border: 3px solid var(--font-light);
+   background-color: var(--font-light);
+   transition: background-color 0.4s ease-in-out;
+}
+
+label:last-of-type {
+   margin-right: 0;
+}
+
+label:hover {
+   background-color: var(--hover);
+   transition: background-color 0.4s ease-in-out;
+}
+
+input:checked+label {
+   background-color: transparent;
+}
+
+@media screen and (max-width: 568px) {}
