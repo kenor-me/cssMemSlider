@@ -92,6 +92,7 @@ h1 {
 }
 
 .text-block {
+   width: 100%;
    font-family: Helvetica, Arial, sans-serif;
    font-size: 1.5rem;
    color: var(--font-light);
@@ -101,6 +102,49 @@ h1 {
 
 .text-block p {
    min-width: 100%;
+   transition: transform .7s ease-in-out, opacity .4s ease-in-out;
+   opacity: 0;
+}
+
+
+#slide1:checked~.controls-container>.text-block>.text-slide1 {
+   opacity: 1;
+}
+
+#slide2:checked~.controls-container>.text-block>.text-slide1,
+#slide2:checked~.controls-container>.text-block>.text-slide2,
+#slide2:checked~.controls-container>.text-block>.text-slide3,
+#slide2:checked~.controls-container>.text-block>.text-slide4,
+#slide2:checked~.controls-container>.text-block>.text-slide5 {
+   transform: translateX(-100%);
+   opacity: 1;
+}
+
+#slide3:checked~.controls-container>.text-block>.text-slide1,
+#slide3:checked~.controls-container>.text-block>.text-slide2,
+#slide3:checked~.controls-container>.text-block>.text-slide3,
+#slide3:checked~.controls-container>.text-block>.text-slide4,
+#slide3:checked~.controls-container>.text-block>.text-slide5 {
+   transform: translateX(-200%);
+   opacity: 1;
+}
+
+#slide4:checked~.controls-container>.text-block>.text-slide1,
+#slide4:checked~.controls-container>.text-block>.text-slide2,
+#slide4:checked~.controls-container>.text-block>.text-slide3,
+#slide4:checked~.controls-container>.text-block>.text-slide4,
+#slide4:checked~.controls-container>.text-block>.text-slide5 {
+   transform: translateX(-300%);
+   opacity: 1;
+}
+
+#slide5:checked~.controls-container>.text-block>.text-slide1,
+#slide5:checked~.controls-container>.text-block>.text-slide2,
+#slide5:checked~.controls-container>.text-block>.text-slide3,
+#slide5:checked~.controls-container>.text-block>.text-slide4,
+#slide5:checked~.controls-container>.text-block>.text-slide5 {
+   transform: translateX(-400%);
+   opacity: 1;
 }
 
 .controls {
@@ -108,7 +152,6 @@ h1 {
    justify-content: space-between;
    min-width: 240px;
 }
-
 
 input {
    display: none;
@@ -142,4 +185,4 @@ label:hover {
    background-color: transparent;
 }
 
-@media screen and (max-width: 568px) {}
+@media screen and (max-width: 770px) {}
